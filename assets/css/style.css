@@ -1,0 +1,317 @@
+/* Define custom fonts */
+@font-face {
+    font-family: 'SyneSemiBold';
+    src: url('../Fonts/Syne/Syne-SemiBold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SyneRegular';
+    src: url('../Fonts/Syne/Syne-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'SyneMedium';
+    src: url('../Fonts/Syne/Syne-Medium.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'NohemiRegular';
+    src: url('../Fonts/Nohemi/Nohemi-Regular-BF6438cc4d0e493.ttf') format('truetype');
+}
+
+/* Define root variables including font families */
+:root {
+    --main-color: #F6F6FA;
+    --light-blueBg: #D0DAE6;
+    --YelloBg: #C2F750;
+    --DarkBlue-color: #0E1A27;
+    --font-semi-bold: 'SyneSemiBold', sans-serif;
+    --font-medium-bold: 'SyneMedium', sans-serif;
+    --font-regular: 'SyneRegular', sans-serif;
+    --font-Nohemiregular: 'NohemiRegular', sans-serif;
+    --opacity: 0.8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+body {
+    background-color: var(--DarkBlue-color);
+    font-family: var(--font-regular);
+}
+
+section {
+    margin: 80px 110px; /* Simplified margin handling */
+}
+
+.commonTitle {
+    color: var(--main-color);
+    font-family: var(--font-semi-bold);
+    font-size: 70px;
+    text-align: center;
+}
+
+.commonSupTitle {
+    color: var(--main-color);
+    font-family: var(--font-regular);
+    font-size: 27px;
+    opacity: var(--opacity);
+    margin-top: 40px; /* Reduced top margin for better spacing */
+    text-align: center;
+}
+
+.WhyUsCard {
+    background-color: var(--light-blueBg);
+    width: 100%;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    padding: 20px; /* Unified padding */
+    box-sizing: border-box;
+    height: auto; /* Adjusted height to fit content */
+    margin-top: 20px; /* Consistent margin between cards */
+}
+
+.number {
+    font-family: var(--font-Nohemiregular);
+    font-size: 100px; /* Adjusted font size for better responsiveness */
+    color: var(--DarkBlue-color);
+    margin-right: 20px; /* Reduced margin for better spacing */
+    position: relative;
+    overflow: hidden; /* Ensure the clipping effect works */
+}
+
+.SecondCard .number::before {
+    content: "";
+    position: absolute;
+    bottom: 60px; /* Position the pseudo-element at the bottom */
+    left: 0;
+    width: 100%;
+    height: 27%; /* Height of the clipped part */
+    background-color: var(--YelloBg); /* Background color same as the number's color */
+    z-index: 1; /* Ensure it sits on top */
+}
+.number::before {
+    content: "";
+    position: absolute;
+    bottom: 60px; /* Position the pseudo-element at the bottom */
+    left: 0;
+    width: 100%;
+    height: 27%; /* Height of the visible part; adjust if necessary */
+    background-color: var(--light-blueBg); /* Background color */
+    z-index: 1; /* Ensure it sits on top */
+}
+
+/* Additional styles for .number */
+.number {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Ensure text sits above the clipping */
+.number span {
+    position: relative;
+    z-index: 2;
+}
+
+.CardTexts {
+    display: flex;
+    flex-direction: column;
+}
+
+.CardHeader {
+    font-family: var(--font-semi-bold);
+    font-size: 30px; /* Adjusted for better readability */
+    color: var(--DarkBlue-color);
+    margin-bottom: 10px;
+}
+
+.text {
+    font-family: var(--font-regular);
+    font-size: 16px; /* Adjusted for better readability */
+    color: var(--DarkBlue-color);
+}
+
+.SecondCard {
+    background-color: var(--YelloBg);
+}
+.SliderTtile{
+    font-size: 47px !important;
+    text-align: left !important;
+}
+.Logos{
+    background-color: var(--light-blueBg);
+    padding: 80px 0 80px 0;
+}
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-250px * 7)); }
+}
+
+.slider {
+    height: auto;
+    margin: auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider .slide-track {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    width: calc(405px * 14); /* Adjust this if needed */
+}
+
+.slider .slide {
+    height: auto;
+    width: 100%;
+    
+  
+}
+.ValuesTitle{
+    text-align: left;
+    font-family: var(--font-medium-bold) ;
+}
+/* Responsive adjustments for screens larger than 1200px */
+@media (min-width: 1201px) {
+    section {
+        margin: 80px 110px;
+    }
+    .commonTitle {
+        font-size: 70px;
+    }
+    .commonSupTitle {
+        font-size: 27px;
+    }
+    .WhyUsCard {
+        padding: 20px 132px; 
+    }
+    .number {
+        font-size: 350px;
+        margin-right: 186px;
+    }
+    .CardHeader {
+        font-size: 40px;
+    }
+    .text {
+        font-size: 18px;
+    }
+}
+
+/* Responsive adjustments for screens between 992px and 1200px */
+@media (max-width: 1200px) and (min-width: 993px) {
+    section {
+        margin: 80px 80px;
+    }
+    .commonTitle {
+        font-size: 60px;
+    }
+    .commonSupTitle {
+        font-size: 24px;
+    }
+    .WhyUsCard {
+        padding: 20px 100px;
+    }
+    .number {
+        font-size: 250px;
+        margin-right: 150px;
+    }
+    .CardHeader {
+        font-size: 40px;
+    }
+    .text {
+        font-size: 20px;
+    }
+}
+
+/* Responsive adjustments for screens between 768px and 992px */
+@media (max-width: 992px) and (min-width: 769px) {
+    section {
+        margin: 60px 60px;
+    }
+    .commonTitle {
+        font-size: 50px;
+    }
+    .commonSupTitle {
+        font-size: 21px;
+    }
+    .WhyUsCard {
+        padding: 20px 80px;
+    }
+    .number {
+        font-size: 200px;
+        margin-right: 120px;
+    }
+    .CardHeader {
+        font-size: 36px;
+    }
+    .text {
+        font-size: 18px;
+    }
+}
+
+/* Responsive adjustments for screens between 576px and 768px */
+@media (max-width: 768px) and (min-width: 577px) {
+    section {
+        margin: 40px 40px;
+    }
+    .commonTitle {
+        font-size: 40px;
+    }
+    .commonSupTitle {
+        font-size: 18px;
+    }
+    .WhyUsCard {
+        padding: 20px 60px;
+    }
+    .number {
+        font-size: 150px;
+        margin-right: 80px;
+    }
+    .CardHeader {
+        font-size: 32px;
+    }
+    .text {
+        font-size: 16px;
+    }
+}
+
+/* Responsive adjustments for screens 576px and below */
+@media (max-width: 576px) {
+    section {
+        margin: 20px;
+    }
+    .commonTitle {
+        font-size: 30px;
+    }
+    .commonSupTitle {
+        font-size: 16px;
+    }
+    .WhyUsCard {
+        padding: 20px;
+        flex-direction: column; /* Stack number and text vertically on very small screens */
+        text-align: center;
+    }
+    .number {
+        font-size: 100px;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .CardTexts {
+        align-items: center;
+    }
+    .CardHeader {
+        font-size: 28px;
+    }
+    .text {
+        font-size: 14px;
+        margin-bottom: 10px;
+    }
+}
