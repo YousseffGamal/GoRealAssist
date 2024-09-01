@@ -23,6 +23,7 @@
 :root {
     --main-color: #F6F6FA;
     --light-blueBg: #D0DAE6;
+    --Rich-blueBg: #3545D6;
     --YelloBg: #C2F750;
     --DarkBlue-color: #0E1A27;
     --font-semi-bold: 'SyneSemiBold', sans-serif;
@@ -143,7 +144,7 @@ section {
     background-color: var(--YelloBg);
 }
 .SliderTtile{
-    font-size: 47px !important;
+   
     text-align: left !important;
 }
 .Logos{
@@ -179,7 +180,74 @@ section {
     text-align: left;
     font-family: var(--font-medium-bold) ;
 }
+.Grid{
+    border-radius: 15px;
+}
+.FirstGrid{
+background-color: var(--Rich-blueBg);
+padding: 73px 0 0 67px;
+}
+.GridTitle {
+    font-size: 47px;
+    color: var(--main-color);
+    font-family: var(--font-semi-bold);
+}
+.GridP{
+    margin-top: 65px;
+    margin-bottom: 72px;
+    font-size: 23px;
+    color: var(--main-color);
+    font-family: var(--font-regular);
+}
+.SecondGrid{
+    background-color: var(--light-blueBg);
+padding: 73px 0 0 67px;
+}
+.SecondGrid .GridTitle{
+    color: var(--DarkBlue-color);
+}
+.SecondGrid .GridP{
+    color: var(--DarkBlue-color);
+}
+.custom-col-1 {
+    background-color: var(--light-blueBg);
+    padding: 73px 0 0 67px;
+}
+
+.custom-col-2 {
+    padding: 0;
+}
+
+.custom-col-3 {
+    background-color: var(--light-blueBg);
+    padding: 73px 0 0 67px;
+}
+
+.custom-col-4 {
+    background-color: var(--YelloBg);
+    padding: 73px 0 0 67px;
+}
+
+/* Ensure there is a small gap between columns without wrapping */
+.custom-col-1, .custom-col-2, .custom-col-3, .custom-col-4 {
+    margin-bottom: 12px; /* Space between rows on smaller screens */
+}
+
+/* Grid Titles and Paragraphs */
+.custom-col-1 .GridTitle,
+.custom-col-3 .GridTitle,
+.custom-col-4 .GridTitle {
+    color: var(--DarkBlue-color);
+}
+
+.custom-col-1 .GridP,
+.custom-col-3 .GridP,
+.custom-col-4 .GridP {
+    color: var(--DarkBlue-color);
+}
+
 /* Responsive adjustments for screens larger than 1200px */
+/* Large screens (min-width: 1201px) */
 @media (min-width: 1201px) {
     section {
         margin: 80px 110px;
@@ -203,9 +271,18 @@ section {
     .text {
         font-size: 18px;
     }
+    .FirstGrid {
+        padding: 73px 0 0 67px;
+    }
+    .GridTitle  {
+        font-size: 47px;
+    }
+    .GridP {
+        font-size: 23px;
+    }
 }
 
-/* Responsive adjustments for screens between 992px and 1200px */
+/* Screens between 993px and 1200px */
 @media (max-width: 1200px) and (min-width: 993px) {
     section {
         margin: 80px 80px;
@@ -229,9 +306,18 @@ section {
     .text {
         font-size: 20px;
     }
+    .FirstGrid {
+        padding: 60px 0 0 50px;
+    }
+    .GridTitle  {
+        font-size: 40px;
+    }
+    .GridP {
+        font-size: 20px;
+    }
 }
 
-/* Responsive adjustments for screens between 768px and 992px */
+/* Screens between 769px and 992px */
 @media (max-width: 992px) and (min-width: 769px) {
     section {
         margin: 60px 60px;
@@ -255,9 +341,21 @@ section {
     .text {
         font-size: 18px;
     }
+    .FirstGrid {
+        padding: 50px 0 0 40px;
+    }
+    .GridTitle {
+        font-size: 35px;
+    }
+    .GridP {
+        font-size: 18px;
+    }
+    .SliderTtile {
+        font-size: 33px !important;
+    }
 }
 
-/* Responsive adjustments for screens between 576px and 768px */
+/* Screens between 577px and 768px */
 @media (max-width: 768px) and (min-width: 577px) {
     section {
         margin: 40px 40px;
@@ -266,7 +364,7 @@ section {
         font-size: 40px;
     }
     .commonSupTitle {
-        font-size: 18px;
+        font-size: 17px;
     }
     .WhyUsCard {
         padding: 20px 60px;
@@ -281,9 +379,21 @@ section {
     .text {
         font-size: 16px;
     }
+    .FirstGrid {
+        padding: 40px 0 0 30px;
+    }
+    .GridTitle {
+        font-size: 30px;
+    }
+    .GridP {
+        font-size: 16px;
+    }
+    .SliderTtile{
+        font-size: 26px !important;
+    }
 }
 
-/* Responsive adjustments for screens 576px and below */
+/* Screens 576px and below */
 @media (max-width: 576px) {
     section {
         margin: 20px;
@@ -313,5 +423,49 @@ section {
     .text {
         font-size: 14px;
         margin-bottom: 10px;
+    }
+    .FirstGrid {
+        padding: 20px;
+    }
+    .GridTitle {
+        font-size: 25px;
+    }
+    .GridP {
+        font-size: 14px;
+    }
+    .SliderTtile{
+        font-size: 20px !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .custom-col-1,
+    .custom-col-3,
+    .custom-col-4 {
+        padding: 50px 0 0 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .custom-col-1,
+    .custom-col-3,
+    .custom-col-4 {
+        padding: 30px 0 0 30px;
+    }
+}
+
+@media (max-width: 768px) {
+    .custom-col-1,
+    .custom-col-3,
+    .custom-col-4 {
+        padding: 20px 0 0 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-col-1,
+    .custom-col-3,
+    .custom-col-4 {
+        padding: 15px 0 0 15px;
     }
 }
