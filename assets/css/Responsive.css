@@ -26,12 +26,29 @@
     .FirstGrid {
         padding: 73px 0 0 67px;
     }
+    .SecondGrid {
+        padding: 73px 0 0 67px;
+    }
     .GridTitle  {
         font-size: 47px;
     }
     .GridP {
         font-size: 23px;
     }
+    footer h2 {
+        font-size: 70px;
+    }
+    .faq-title {
+        font-size: 60px; /* Larger font size for very large screens */
+    }
+    .faqP {
+        font-size: 24px; /* Slightly larger font size for very large screens */
+        padding-bottom: 40px; /* Increase padding for a larger layout */
+    }
+    .accordion-body {
+        font-size: 24px; /* Slightly larger font size for very large screens */
+    }
+
 }
 
 /* Screens between 993px and 1200px */
@@ -61,12 +78,30 @@
     .FirstGrid {
         padding: 60px 0 0 50px;
     }
+    .SecondGrid {
+        padding: 60px 0 0 50px;
+    }
     .GridTitle  {
         font-size: 40px;
     }
     .GridP {
         font-size: 20px;
     }
+    footer h2 {
+        font-size: 60px;
+    }
+    .faq-title {
+        font-size: 55px; /* Adjust font size for medium to large screens */
+    }
+    .faqP {
+        font-size: 23px; /* Adjust font size for medium to large screens */
+        padding-bottom: 38px; /* Adjust padding for a more balanced look */
+    }
+    .accordion-body {
+        font-size: 22px; /* Adjust font size for medium to large screens */
+    }
+
+
 }
 
 /* Screens between 769px and 992px */
@@ -96,6 +131,9 @@
     .FirstGrid {
         padding: 50px 0 0 40px;
     }
+    .SecondGrid {
+        padding: 50px 0 0 40px;
+    }
     .GridTitle {
         font-size: 35px;
     }
@@ -104,6 +142,19 @@
     }
     .SliderTtile {
         font-size: 33px !important;
+    }
+    footer h2 {
+        font-size: 50px;
+    }
+    .faq-title {
+        font-size: 50px; /* Adjust font size for tablets and smaller screens */
+    }
+    .faqP {
+        font-size: 20px; /* Adjust font size for tablets and smaller screens */
+        padding-bottom: 30px; /* Reduce padding for a more compact layout */
+    }
+    .accordion-body {
+        font-size: 20px; /* Adjust font size for tablets and smaller screens */
     }
 }
 
@@ -134,6 +185,9 @@
     .FirstGrid {
         padding: 40px 0 0 30px;
     }
+    .SecondGrid {
+        padding: 40px 0 0 30px;
+    }
     .GridTitle {
         font-size: 30px;
     }
@@ -143,10 +197,37 @@
     .SliderTtile{
         font-size: 26px !important;
     }
+    footer h2 {
+        font-size: 40px;
+    }
+    .faq-title {
+        font-size: 45px; /* Adjust font size for smaller tablets and larger phones */
+    }
+    .faqP {
+        font-size: 18px; /* Adjust font size for smaller tablets and larger phones */
+        padding-bottom: 25px; /* Reduce padding for smaller screens */
+    }
+    .accordion-body {
+        font-size: 18px; /* Adjust font size for smaller tablets and larger phones */
+    }
+    .card {
+        width: 100%; /* Make sure it takes full width on smaller screens */
+    }
+
 }
 
 /* Screens 576px and below */
 @media (max-width: 576px) {
+    .number::before {
+      
+        bottom: 20px;
+       
+    }
+    .SecondCard .number::before {
+      
+        bottom: 20px;
+      
+    }
     section {
         margin: 20px;
     }
@@ -179,6 +260,9 @@
     .FirstGrid {
         padding: 20px;
     }
+    .SecondGrid {
+        padding: 20px;
+    }
     .GridTitle {
         font-size: 25px;
     }
@@ -187,6 +271,19 @@
     }
     .SliderTtile{
         font-size: 20px !important;
+    }
+    footer h2 {
+        font-size: 30px;
+    }
+    .faq-title {
+        font-size: 35px; /* Adjust font size for mobile screens */
+    }
+    .faqP {
+        font-size: 16px; /* Adjust font size for mobile screens */
+        padding-bottom: 20px; /* Further reduce padding for mobile screens */
+    }
+    .accordion-body {
+        font-size: 16px; /* Adjust font size for mobile screens */
     }
 }
 
@@ -221,3 +318,7 @@
         padding: 15px 0 0 15px;
     }
 }
+
+
+
+
