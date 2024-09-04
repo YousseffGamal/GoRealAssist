@@ -119,6 +119,10 @@ section {
     font-family: var(--font-semi-bold);
     color: #000000;
     border-color: var(--YelloBg);
+    
+}
+.btn-outline-success a{
+    text-emphasis: none;
 }
 .btn-outline-success:hover{
     background-color: transparent;

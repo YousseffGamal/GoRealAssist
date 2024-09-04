@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Go Real Assist Book Now</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="/assets/css/Responsive.css" />
+  <style>
+    .profile {
+      width: 69px !important;
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><h1>GO REAL ASSIST</h1></a>
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-toggle="collapse"
+      data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mx-auto">
+        <li class="nav-item"><a class="nav-link" href="/index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="./Testimonials.html">Testimonials</a></li>
+        <li class="nav-item"><a class="nav-link" href="../faq/faq.html">FAQ</a></li>
+        <li class="nav-item"><a class="nav-link" href="../ContactUs/ContactUs.html">Contact Us</a></li>
+      </ul>
+      <form class="form-inline my-2 my-lg-0">
+        <a href="../Calendly/Calendly.html" class="btn btn-outline-success my-2 my-sm-0">Book Your Service</a>
+      </form>
+    </div>
+  </nav>
+  <!-- start of testimonials section -->
+  <section>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col">
+          <h1 class="commonTitle">Book Now</h1>
+          <h2 id="cardTitle"></h2>
+        </div>
+      </div>
+      <div class="row">
+        <!-- Calendly inline widget begin -->
+        <div class="calendly-inline-widget" data-url="https://calendly.com/youssefggamal552" style="min-width: 320px; height: 700px"></div>
+        <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+        <!-- Calendly inline widget end -->
+      </div>
+    </div>
+  </section>
+
+  <!-- start of footer -->
+  <div style="margin-top: 200px">
+    <section>
+      <footer>
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-6 col-12">
+              <h2>The Ultimate Learning <br /> Hub to Unlock Your <br /> Full Potential</h2>
+            </div>
+            <div class="col-md-3 col-12">
+              <p class="navg">Navigation</p>
+              <ul style="padding: 0">
+                <li>Home</li>
+                <li>FAQ</li>
+                <li>Testimonials</li>
+              </ul>
+            </div>
+            <div class="col-md-3 col-12">
+              <p class="end">Still Have Questions?</p>
+              <button type="button" class="btn btn-light">
+                Contact Us
+                <span><img style="width: 25.83px; height: 16px" class="lastarrow" src="./assets/images/DarkArrow.png" alt=""/></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </section>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    // JavaScript to extract the card title from the URL and display it
+    const urlParams = new URLSearchParams(window.location.search);
+    const title = urlParams.get('title');
+    if (title) {
+      document.getElementById('cardTitle').innerHTML = title.replace(/%20/g, ' ');
+    }
+  </script>
+</body>
+</html>
