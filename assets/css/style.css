@@ -13,10 +13,18 @@
     font-family: 'SyneMedium';
     src: url('../Fonts/Syne/Syne-Medium.ttf') format('truetype');
 }
+@font-face {
+    font-family: 'SyneBold';
+    src: url('../Fonts/Syne/Syne-Bold.ttf') format('truetype');
+}
 
 @font-face {
     font-family: 'NohemiRegular';
     src: url('../Fonts/Nohemi/Nohemi-Regular-BF6438cc4d0e493.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'RocMedium';
+    src: url('../Fonts/Demo_Fonts/Fontspring-DEMO-rocgroteskwide-medium.otf') format('truetype');
 }
 
 /* Define root variables including font families */
@@ -27,6 +35,8 @@
     --YelloBg: #C2F750;
     --DarkBlue-color: #0E1A27;
     --font-semi-bold: 'SyneSemiBold', sans-serif;
+    --font-bold: 'SyneBold', sans-serif;
+
     --font-medium-bold: 'SyneMedium', sans-serif;
     --font-regular: 'SyneRegular', sans-serif;
     --font-Nohemiregular: 'NohemiRegular', sans-serif;
@@ -50,7 +60,85 @@ body {
 section {
     margin: 80px 110px; /* Simplified margin handling */
 }
+.navbar {
+    padding: 31px 110px 0 110px; /* Simplified margin handling */
+    background-color: rgba(14, 26, 39, 0.2); 
+}
 
+.navbar-brand h1 {
+    font-size: 32.53px;
+    font-family: "RocMedium";
+    color: var(--main-color);
+}
+
+.nav-link {
+    color: var(--main-color);
+    font-size: 20px;
+    font-family: var(--font-medium-bold);
+    margin-right: 40px;
+    opacity: 0.7;
+    position: relative; /* For positioning the underline */
+}
+.nav-link:hover{
+    opacity: 1 !important;
+    color: var(--main-color) !important;
+}
+.nav-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px; /* Height of the underline */
+    background-color: #FFFFFF; /* Hover underline color */
+    position: absolute;
+    bottom: -5px; /* Position the underline just below the text */
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%; /* Full width underline on hover */
+
+}
+
+.nav-link.active::after {
+    width: 100%;
+    background-color: var(--main-color); /* Active link underline color */
+}
+
+.nav-link.active {
+    opacity: 1 !important;
+    color: var(--main-color) !important;
+}
+
+.btn-outline-success {
+    width: 274px;
+    height: 46px;
+    background-color: var(--YelloBg);
+    border-radius: 85px;
+    font-size: 21.33px;
+    font-family: var(--font-semi-bold);
+    color: #000000;
+    border-color: var(--YelloBg);
+}
+.btn-outline-success:hover{
+    background-color: transparent;
+    border-color: var(--YelloBg);
+    color: var(--YelloBg);
+}
+.headerr{
+    margin-top: 105px;
+    font-size: 81px;
+    color: var(--main-color);
+    text-align: center;
+    font-family: var(--font-bold);
+}
+.supheader{
+    margin-top: 25px;
+    font-size: 27px;
+    color: var(--main-color);
+    text-align: center;
+    font-family: var(--font-regular);
+}
 .commonTitle {
     color: var(--main-color);
     font-family: var(--font-semi-bold);
@@ -310,6 +398,88 @@ color: #000000;
     font-family: var(--font-regular) ;
     margin-bottom: 32px;
   }
+  .customer-review-wrapper {
+    position: relative;
+    overflow: hidden;
+    height: 1080px; /* You may adjust the height as needed */
+  }
+  
+  .customer-review-wrapper::before,
+  .customer-review-wrapper::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 300px; /* Increased height for a more noticeable fade */
+    width: 100%;
+    z-index: 10;
+  }
+  
+  .customer-review-wrapper::before {
+    top: 0;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%);
+  }
+  
+  .customer-review-wrapper::after {
+    bottom: 0;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0) 60%);
+  }
+  
+  .review-item-wrap {
+    animation: friskTestimonialScroll 30s linear infinite;
+    transition: all 0.5s ease-in;
+    animation-duration: 16s;
+  }
+  
+  .review-item-wrap:hover {
+    animation-play-state: paused;
+  }
+  
+  @keyframes friskTestimonialScroll {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-50%);
+    }
+  }
+  
+  .review-item {
+    background: #f5f4f9 !important;
+    padding: 40px 35px 25px;
+    margin-bottom: 25px;
+    border-radius: 26.67px;
+  }
+  
+  .review-item .rating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 18px;
+  }
+  
+  .review-item .title span {
+    font-size: 26px;
+    font-family: var(--font-semi-bold);
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .review-item p {
+    color: #000000;
+    margin-bottom: 40px;
+    font-size: 25px;
+    font-family: var(--font-regular);
+  }
+  
+  .review-item > span {
+    color: rgba(10, 12, 0, 0.6);
+    display: block;
+    font-size: 18px;
+    border-top: 1px solid #cececc;
+    padding-top: 10px;
+    font-family: var(--font-regular);
+  }
+  
   .card {
     width: 100%; /* Default: Let Bootstrap handle width */
     max-width: 559px; /* Constrain width to 559px max */
@@ -358,7 +528,7 @@ color: #000000;
     margin: 0;
     padding: 5px 10px; /* Optional: Add some padding to the title */
     color: #FFFFFF; /* White text to stand out against the image */
-    font-size: 45px; /* Adjust font size as needed */
+    font-size: 38px; /* Adjust font size as needed */
     z-index: 10; /* Ensure the title is above the overlay and fade effect */
     font-family: var(--font-semi-bold);
     text-align: left; /* Align the text to the left */
@@ -406,5 +576,13 @@ color: #000000;
 
 .card-btn:hover {
     background-color: #a3e020; /* Hover background color */
+    color: #000000;
+    transition: 0.6s;
    
 }
+
+.btn-light:hover{
+    background-color: transparent;
+    border-color: var(--YelloBg);
+    color: var(--YelloBg);
+  }
