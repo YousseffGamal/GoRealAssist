@@ -60,6 +60,13 @@ body {
 section {
     margin: 80px 110px; /* Simplified margin handling */
 }
+.landing{
+    background-image: url("../Images/Frame\ 126\ \(1\).png");
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    background-size: cover;
+}
 .navbar {
     padding: 31px 110px 0 110px; /* Simplified margin handling */
     background-color: rgba(14, 26, 39, 0.2); 
