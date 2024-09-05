@@ -373,6 +373,10 @@
 }
 
 @media (max-width: 768px) {
+    #mySVG{
+        width: 100%;
+        height: 100%;
+    }
     .card {
         height: 350px;
     }
