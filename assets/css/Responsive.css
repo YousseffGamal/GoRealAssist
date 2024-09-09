@@ -322,20 +322,18 @@
     .custom-col-4 {
         padding: 20px 0 0 20px;
     }
-    .Grid {
-        margin-bottom: 10px;
-    }
+  
 }
 
 @media (max-width: 576px) {
-    .Grid {
-        margin-bottom: 10px;
-    }
+  
     .custom-col-1,
     .custom-col-3,
     .custom-col-4 {
         padding: 15px 0 0 15px;
+        margin-bottom: 10px;
     }
+
 }
 
 
