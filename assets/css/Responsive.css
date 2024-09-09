@@ -18,10 +18,10 @@
         margin-right: 186px;
     }
     .CardHeader {
-        font-size: 30px;
+        font-size: 40px;
     }
     .text {
-        font-size: 12px;
+        font-size: 15px;
     }
     .FirstGrid {
         padding: 23px 0 0 20px;
@@ -53,6 +53,10 @@
 
 /* Screens between 993px and 1200px */
 @media (max-width: 1200px) and (min-width: 993px) {
+    .fixImage{
+        width: 100%;
+    }
+    
     section {
         margin: 80px 80px;
     }
@@ -106,6 +110,9 @@
 
 /* Screens between 769px and 992px */
 @media (max-width: 992px) and (min-width: 769px) {
+    .fixImage{
+        width: 100% !important;
+    }
     section {
         margin: 60px 60px;
     }
@@ -160,6 +167,9 @@
 
 /* Screens between 577px and 768px */
 @media (max-width: 768px) and (min-width: 577px) {
+    .fixImage{
+        width: 100% !important;
+    }
     section {
         margin: 40px 40px;
     }
@@ -218,6 +228,9 @@
 
 /* Screens 576px and below */
 @media (max-width: 576px) {
+    .fixImage{
+        width: 100% !important;
+    }
     .number::before {
       
         bottom: 20px;
@@ -309,9 +322,15 @@
     .custom-col-4 {
         padding: 20px 0 0 20px;
     }
+    .Grid {
+        margin-bottom: 10px;
+    }
 }
 
 @media (max-width: 576px) {
+    .Grid {
+        margin-bottom: 10px;
+    }
     .custom-col-1,
     .custom-col-3,
     .custom-col-4 {
