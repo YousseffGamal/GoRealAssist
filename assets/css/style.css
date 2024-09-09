@@ -42,6 +42,9 @@
     --font-Nohemiregular: 'NohemiRegular', sans-serif;
     --opacity: 0.8;
 }
+a{
+    text-decoration: none;
+}
 
 * {
     margin: 0;
@@ -183,34 +186,27 @@ section {
 }
 
 .number {
+    margin-top: 102px;
+    margin-bottom: 114px;
     font-family: var(--font-Nohemiregular);
-    font-size: 100px; /* Adjusted font size for better responsiveness */
+    font-size: 100px;
     color: var(--DarkBlue-color);
-    margin-right: 20px; /* Reduced margin for better spacing */
+    margin-right: 20px;
     position: relative;
-    overflow: hidden; /* Ensure the clipping effect works */
+    overflow: hidden; 
 }
 
-.SecondCard .number::before {
+/* .SecondCard .number::before {
     content: "";
     position: absolute;
-    bottom: 60px; /* Position the pseudo-element at the bottom */
+    bottom: 60px;
     left: 0;
     width: 100%;
-    height: 27%; /* Height of the clipped part */
-    background-color: var(--YelloBg); /* Background color same as the number's color */
-    z-index: 1; /* Ensure it sits on top */
-}
-.number::before {
-    content: "";
-    position: absolute;
-    bottom: 60px; /* Position the pseudo-element at the bottom */
-    left: 0;
-    width: 100%;
-    height: 27%; /* Height of the visible part; adjust if necessary */
-    background-color: var(--light-blueBg); /* Background color */
-    z-index: 1; /* Ensure it sits on top */
-}
+    height: 27%;
+    background-color: var(--YelloBg); 
+    z-index: 1;
+} */
+/*   */
 
 /* Additional styles for .number */
 .number {
@@ -232,14 +228,14 @@ section {
 
 .CardHeader {
     font-family: var(--font-semi-bold);
-    font-size: 30px; /* Adjusted for better readability */
+    font-size: 18px; /* Adjusted for better readability */
     color: var(--DarkBlue-color);
     margin-bottom: 10px;
 }
 
 .text {
     font-family: var(--font-regular);
-    font-size: 16px; /* Adjusted for better readability */
+    font-size: 13px; /* Adjusted for better readability */
     color: var(--DarkBlue-color);
 }
 
@@ -314,7 +310,7 @@ padding: 73px 0 0 67px;
 }
 .custom-col-1 {
     background-color: var(--light-blueBg);
-    padding: 73px 0 0 67px;
+    padding: 23px 0 0 20px;
 }
 
 .custom-col-2 {
@@ -323,12 +319,12 @@ padding: 73px 0 0 67px;
 
 .custom-col-3 {
     background-color: var(--light-blueBg);
-    padding: 73px 0 0 67px;
+    padding: 23px 0 0 20px;
 }
 
 .custom-col-4 {
     background-color: var(--YelloBg);
-    padding: 73px 0 0 67px;
+    padding: 23px 0 0 20px;
 }
 
 /* Ensure there is a small gap between columns without wrapping */

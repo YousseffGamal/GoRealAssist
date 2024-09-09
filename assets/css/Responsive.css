@@ -18,22 +18,22 @@
         margin-right: 186px;
     }
     .CardHeader {
-        font-size: 40px;
+        font-size: 30px;
     }
     .text {
-        font-size: 18px;
+        font-size: 12px;
     }
     .FirstGrid {
-        padding: 73px 0 0 67px;
+        padding: 23px 0 0 20px;
     }
     .SecondGrid {
-        padding: 73px 0 0 67px;
+        padding: 23px 0 0 20px;
     }
     .GridTitle  {
-        font-size: 47px;
+        font-size: 30px;
     }
     .GridP {
-        font-size: 23px;
+        font-size: 20px;
     }
     footer h2 {
         font-size: 70px;
